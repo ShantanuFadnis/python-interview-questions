@@ -1,5 +1,5 @@
 def fib_recursive(n):
-    if n <= 2:
+    if n == 1 or n == 2:
         return 1
     return fib_recursive(n - 2) + fib_recursive(n - 1)
 
@@ -14,7 +14,7 @@ def fib_arr(n):
 
 
 def fib_memoization(n):
-    if n <= 2:
+    if n == 1 or n == 2:
         return 1
     first = 1
     second = 1

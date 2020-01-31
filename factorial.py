@@ -1,4 +1,5 @@
-def fact(n):
+def factorial(n):
+    """Returns the factorial of a given integer"""
     if n == 0 or n == 1:
         return 1
     res = 1
@@ -6,6 +7,16 @@ def fact(n):
         res *= i
     return res
 
+
+def factorial_recursive(n):
+    """Returns the factorial of a given integer"""
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
 if __name__ == '__main__':
-    res = fact(int(input('> ')))
-    print(res)
+    num = int(input('> '))
+    print(factorial(num))
+    print(factorial_recursive(num))
