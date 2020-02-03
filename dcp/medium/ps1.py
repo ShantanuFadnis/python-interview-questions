@@ -62,7 +62,7 @@ def deserialize(string:str):
 
     return tree
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     tree_list = [2, 5, 3, 9]
     my_tree = create_tree(tree_list)
     srt1 = serialize(my_tree)
