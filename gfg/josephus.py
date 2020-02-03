@@ -1,7 +1,7 @@
 """
 Given the total number of persons n and a number k which indicates that k-1 persons are skipped and kth person is killed in circle in a fixed direction.
 The task is to choose the safe place in the circle so that when you perform these operations starting from 1st place in the circle, you are the last one remaining and survive.
- 
+
 Input Format:
 The first line of input contains an integer T denoting the number of test cases . Then T test cases follow. Each test case contains 2 integers n and k .
 
@@ -26,12 +26,15 @@ Output
 
 """
 
+
 def josephus(n, k):
     if n == 1:
         return 1
-    else:
-        return (josephus(n - 1, k) + k - 1) % n + 1 
+    return (josephus(n - 1, k) + k - 1) % n + 1
 
-n = int(input("Enter number of people: "))
-k = int(input("Person to be Sliced: "))
-print(josephus(n, k))
+
+if __name__ == '__main__':
+    t = int(input())
+    for _ in range(t):
+        a, b = input(), input()
+        josephus(a, b)
