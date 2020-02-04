@@ -24,13 +24,3 @@ def fib_memoization(n):
         first = second
         second = res
     return res
-
-
-if __name__ == '__main__':
-    n = int(input('> '))
-    res = fib_recursive(n)
-    print(res)
-    res = fib_arr(n)
-    print(res)
-    res = fib_memoization(n)
-    print(res)

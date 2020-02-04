@@ -7,9 +7,6 @@ Bonus: Can you do this in one pass?
 
 """
 
-my_list = [10, 15, 3, 7, 8, 19, 54, 67, 48, 98]
-k = 27
-
 
 def find_sum(my_list, k):
     my_list.sort()
@@ -19,6 +16,8 @@ def find_sum(my_list, k):
     last = my_list[li]
     for _ in range(len(my_list)):
         diff = k - first
+        if fi >= len(my_list) + li:
+            return False
         if diff == last:
             return True
         if last > diff:
@@ -27,9 +26,4 @@ def find_sum(my_list, k):
         elif last < diff:
             fi += 1
             first = my_list[fi]
-        
     return False
-
-
-if __name__ == '__main__':
-    print(find_sum(my_list, k))

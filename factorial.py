@@ -14,9 +14,3 @@ def factorial_recursive(n):
         return 1
     else:
         return n * factorial(n - 1)
-
-
-if __name__ == '__main__':
-    num = int(input('> '))
-    print(factorial(num))
-    print(factorial_recursive(num))
