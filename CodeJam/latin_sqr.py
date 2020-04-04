@@ -51,17 +51,19 @@ def latin_square(N:int, matrix):
     return mat
 
 T = int(input("Total Test Cases: "))
-for a in range(T):
-    N = int(input("Side of Matrix: "))
-    values = []
-    for i in range(N):
-        values.append(input(" Row: "))
-    matrix = []
-    for i in range(N):
-        matrix.append(values[i].split(","))
-    print(matrix)
-    mat = []
-    mat.append(latin_square(N, matrix))
+if T <= 100:
+    for a in range(T):
+        N = int(input("Side of Matrix: "))
+        if 2 <= N <= 100:
+            values = []
+            for i in range(N):
+                values.append(input(" Row: "))
+            matrix = []
+            for i in range(N):
+                matrix.append(values[i].split(","))
+            print(matrix)
+            mat = []
+            mat.append(latin_square(N, matrix))
 
 for i in range(T):
     print("Case #", i+1, ":", mat[i][0], mat[i][1], mat[i][2])

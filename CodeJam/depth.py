@@ -40,7 +40,7 @@ def nest(S):
     for i in range(len(S)):
         print("for 1")
         st1 = ""
-        if S[i] == "2": break
+        if S[i] == "10": break
         if count == int(S[i]): 
             print("if 1")
             print(count)
@@ -75,9 +75,10 @@ def nest(S):
 
 
 T = int(input("Total Test Cases: "))
-for i in range(T):
-    S = input("String of number: ")
-    print(S[j] for j in range(len(S)))
-    print()
-    st1 = nest(S + "2")
-    print("Case #", i+1, ": ", st1)
+if T <= 100:
+    for i in range(T):
+        S = input("String of number: ")
+        if S <= 100:
+            print()
+            st1 = nest(S + "10")
+            print("Case #", i+1, ": ", st1)
